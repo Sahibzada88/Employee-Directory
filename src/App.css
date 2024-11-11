@@ -1,38 +1,159 @@
-.App {
+.hamburger-menu button, .horizontal-menu ul li, .employee-tile button, .modal button {
+  cursor: pointer;
+}
+
+/* HamburgerMenu.css */
+
+.hamburger-menu {
+  position: relative;
+}
+
+.hamburger-icon {
+  font-size: 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #333;
+}
+
+.hamburger-nav {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.hamburger-nav ul {
+  list-style-type: none; /* Remove bullets */
+  padding: 0;
+  margin: 0;
+}
+
+.hamburger-nav ul li {
+  padding: 12px 20px;
+}
+
+.menu-item {
+  text-decoration: none; /* Remove underline */
+  color: blue; /* Initial color */
+  display: block;
+  transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.menu-item:hover {
+  color: darkblue; /* Slightly darker blue on hover */
+}
+
+.menu-item:active,
+.menu-item.selected {
+  color: red; /* Change to red when clicked */
+}
+
+.submenu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: blue;
+  font-weight: bold;
+  padding: 0;
+}
+
+.submenu-btn:hover {
+  color: darkblue;
+}
+
+.submenu {
+  margin-top: 10px;
+  padding-left: 20px; /* Indent submenu items */
+}
+
+.submenu li {
+  padding: 8px 0;
+}
+
+.submenu li a {
+  font-size: 14px;
+}
+
+
+/* HorizontalMenu.css */
+
+.horizontal-menu {
+  background-color: #f9f9f9; /* Light background for contrast */
+  padding: 10px 0; /* Padding around menu */
+  border-bottom: 2px solid #ddd;
+}
+
+.horizontal-menu ul {
+  list-style-type: none; /* Remove bullet points */
+  display: flex;
+  justify-content: center; /* Center-align menu items */
+  gap: 30px; /* Space between menu items */
+  margin: 0;
+  padding: 0;
+}
+
+.horizontal-menu ul li {
+  font-size: 18px; /* Make menu items larger */
+  font-weight: bold; /* Bold text */
+}
+
+.horizontal-menu ul li a {
+  text-decoration: none;
+  color: blue; /* Initial color */
+  padding: 10px 15px; /* Padding for clickable area */
+  transition: color 0.3s, transform 0.3s; /* Smooth color change */
+}
+
+.horizontal-menu ul li a:hover {
+  color: darkblue; /* Darker shade on hover */
+}
+
+.horizontal-menu ul li a:active {
+  color: red; /* Change to red when clicked */
+}
+
+.horizontal-menu ul li a.selected {
+  color: red; /* Active color when selected */
+}
+
+.horizontal-menu ul li a:focus {
+  outline: none; /* Remove outline on focus */
+}
+
+
+.grid-view {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.tile-view {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.employee-tile {
+  border: 1px solid #ddd;
+  padding: 10px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  z-index: 1000;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.modal-content {
+  text-align: center;
 }
